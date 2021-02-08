@@ -12,6 +12,8 @@ proxy was added to frontend package.json to http://localhost:5000
 If endpoint isn't found on frontend then it will look on proxy 
 (backend) for the endpoint. 
 
+axios is still present in this app in the fronend.
+
 Did enverything to the front end. The backend is just the express
 server that I am used to making.
 #### defind> endpoint
