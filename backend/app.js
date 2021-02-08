@@ -7,7 +7,6 @@ app.get('/hi',(req,res)=>{
     const data = []
     data.push({color:"yellow"})
     res.send(data)
-    res.send('Backend works!')
 })
 
 app.listen(port,()=>{

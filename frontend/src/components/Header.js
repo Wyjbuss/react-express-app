@@ -1,25 +1,15 @@
-import React, { Component } from 'react'
-import axios from 'axios'
+import React, { useState,useEffect } from 'react'
 
-export default class Header extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {favoritecolor: "red"};
-      }
-    componentDidMount = ()=>{
-        axios.get('/hi').then(response=>{
-        const [{color}] = response.data
-        console.log(color);
-        this.setState({favoritecolor : color})
-        })
-    }
+export default function Header(){
+
+    const [favColor,setFavColor] = useState("red")
    
-    render() {
-        return (
-            <div>
-                <h1>My fav color is {this.state.favoritecolor}</h1>
-            </div>
-        )
-    }
+   useEffect(()=>{console.log(`my fav color is ${favColor}`)},[])
+    
+    return (
+        <div>
+            <h1>My fav color is {favColor}</h1>
+        </div>
+    )
 }
 
