@@ -3,9 +3,11 @@ const express = require('express')
 const port = process.env.PORT || 5000
 const app = express()
 
-app.get('/hh',(req,res)=>{
+app.get('/hi',(req,res)=>{
+    const data = []
+    data.push({color:"yellow"})
+    res.send(data)
     res.send('Backend works!')
-    const color = "blue"
 })
 
 app.listen(port,()=>{

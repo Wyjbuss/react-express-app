@@ -7,8 +7,10 @@ export default class Header extends Component {
         this.state = {favoritecolor: "red"};
       }
     componentDidMount = ()=>{
-        axios.get('/hh').then(response=>{
-        console.log(response.status);
+        axios.get('/hi').then(response=>{
+        const [{color}] = response.data
+        console.log(color);
+        this.setState({favoritecolor : color})
         })
     }
    
